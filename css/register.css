@@ -1,0 +1,408 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-fam);
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    padding: 0 10px;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 30px;
+}
+
+.main
+{
+    margin-left: 20px;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main_logo
+{
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo
+{
+    fill: var(--theme-color);
+    object-fit: contain;
+    width: 100px;
+    height: 100px;
+}
+
+.main span
+{
+    font-size: 80px;
+    color: var(--theme-color);
+}
+
+.main .welcome
+{
+    margin-left: 10px;
+    width: 90%;
+    text-align: center;
+}
+
+.main .welcome p
+{
+    font-size: 20px;
+    color: var(--theme-color);
+}
+
+.drop
+{
+    margin: 10px;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    text-shadow: -2px -2px 5px #fff;
+    filter: drop-shadow(4px 4px 10px #fff);
+    box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05),
+    15px 25px 10px rgba(0, 0, 0, 0.05),
+    15px 20px 20px rgba(0, 0, 0, 0.05),
+    inset -10px -10px 15px rgba(255, 255, 255, 0.9);
+}
+
+.drop::before
+{
+    content: '';
+    position: absolute;
+    top: 35px;
+    left: 25px;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    filter: blur(2px);
+}
+
+.drop::after
+{
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 50px;
+    background: #fff;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    filter: blur(2px);
+}
+
+.wrapper
+{
+    max-width: 500px;
+    width: 100%;
+    background: #fff;
+    margin: 20px auto;
+    padding: 30px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125);
+}
+
+.wrapper .title
+{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: var(--theme-color);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.wrapper .form
+{
+    width: 100%;
+}
+
+.wrapper .form .input_field
+{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper .form .input_field label
+{
+    width: 200px;
+    margin-right: 10px;
+}
+
+.wrapper .form .input_field .input
+{
+    width: 100%;
+    outline: none;
+    border: 1px solid #d5dbd9;
+    font-size: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.wrapper .form .input_field .input:focus,
+.wrapper .form .input_field .input:hover
+{
+    border-color: var(--theme-color);
+}
+
+.wrapper .form .input_field .custom_select
+{
+    position: relative;
+    width: 100%;
+    height: 37px;
+}
+
+.wrapper .form .input_field .custom_select select
+{
+    border: 1px solid #d5dbd9;
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 100%;
+    padding: 8px 10px;
+    border-radius: 3px;
+    outline: none;
+}
+
+.wrapper .form .input_field .custom_select::before
+{
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    border: 8px solid;
+    border-color: var(--theme-color) transparent transparent transparent;
+    pointer-events: none;
+}
+
+.wrapper .form .input_field p
+{
+    font-size: 14px;
+    color: #757575;
+}
+
+.wrapper .form .input_field .check
+{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.wrapper .form .input_field .check input[type = "checkbox"]
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.wrapper .form .input_field .check .checkmark
+{
+    width: 15px;
+    height: 15px;
+    border: 1px solid var(--theme-color);
+    display: block;
+    position: relative;
+}
+
+.wrapper .form .input_field .check .checkmark::before
+{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 8px;
+    height: 2px;
+    border: 2px solid;
+    border-color: transparent transparent #fff #fff;
+    transform: rotate(-45deg);
+    display: none;
+}
+
+.wrapper .form .input_field .check input[type = "checkbox"]:checked ~ .checkmark
+{
+    background: var(--theme-color );
+}
+
+.wrapper .form .input_field .check input[type = "checkbox"]:checked ~ .checkmark::before
+{
+    display: block;
+}
+
+.wrapper .form .input_field .btn
+{
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 0;
+    background: var(--theme-color);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.wrapper .form .input_field:last-child
+{
+    margin-bottom: 0;
+}
+
+.wrapper .form .input_field .btn:hover
+{
+    font-size: 18px;
+}
+
+@media (max-width: 1000px)
+{
+    body
+    {
+        flex-direction: column;
+    }
+    .main
+    {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 600px)
+{
+    .main
+    {
+        margin-top: 10px;
+        width: 80%;
+        margin-bottom: 0;
+    }
+    .logo
+    {
+        width: 50px;
+        height: 50px;
+    }
+    .drop
+    {
+        width: 80px;
+        height: 80px;
+    }
+    .drop::before
+    {
+        top: 8px;
+        left: 17px;
+        width: 11px;
+        height: 11px;
+    }
+    .drop::after
+    {
+        top: 22px;
+        left: 25px;
+        width: 8px;
+        height: 8px;
+    }
+    .main span
+    {
+        font-size: 30;
+    }
+    .main .welcome
+    {
+        display: none;
+    }
+    .wrapper
+    {
+        width: 80%;
+    }
+    .wrapper .form .input_field
+    {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .wrapper .form .input_field label
+    {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 520px)
+{
+
+    .logo
+    {
+        width: 30px;
+        height: 30px;
+    }
+    .drop
+    {
+        width: 50px;
+        height: 50px;
+    }
+    .drop::before
+    {
+        top: 11px;
+        left: 7px;
+        width: 11px;
+        height: 11px;
+    }
+    .drop::after
+    {
+        display: none;
+    }
+    .main span
+    {
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 440px)
+{
+
+    .logo
+    {
+        width: 80px;
+        height: 80px;
+    }
+    .drop
+    {
+        width: 100px;
+        height: 100px;
+    }
+    .drop::before
+    {
+        left: 23px;
+    }
+    .main span
+    {
+        font-size: 120px;
+    }
+    .main .two
+    {
+        display: none;
+    }
+}
+
+.error-message
+{
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}

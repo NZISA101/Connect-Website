@@ -1,0 +1,98 @@
+.style-switcher
+{
+    position: fixed;
+    right: 0;
+    top: 60px;
+    padding: 15px;
+    width: 200px;
+    border: 1px solid var(--bg-black-50);
+    background: var(--bg-colour);
+    z-index: 101;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    transform: translateX(100%);
+}
+
+.style-switcher.open
+{
+    transform: translateX(-25px) 
+}
+
+.style-switcher .s-icon
+{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+    right: 100%;
+    color: var(--text-colour);
+    margin-right: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.style-switcher .style-switcher-toggler
+{
+    line-height: 40px;
+}
+
+.style-switcher .style-switcher-toggler
+{
+    top: 0;
+}
+
+.style-switcher .top
+{
+    top: 55px;
+}
+
+.style-switcher h4
+{
+    margin: 0 0 10px;
+    color: var(--text-colour);
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.style-switcher .colors
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.style-switcher .colors span
+{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.style-switcher .color-1
+{
+    background: red;
+}
+
+.style-switcher .color-2
+{
+    background: rgb(0, 76, 255);
+}
+
+.style-switcher .color-3
+{
+    background: rgb(255, 123, 0);
+}
+
+.style-switcher .color-4
+{
+    background: rgb(0, 255, 21);
+}
+
+.style-switcher .color-5
+{
+    background: rgb(255, 0, 166);
+}

@@ -1,0 +1,32 @@
+.page-wrapper .page-inner .p
+{
+    margin-left: 40px;
+}
+
+.colors
+{
+    position: absolute;
+    left: 321px;
+    padding: 10px;
+    background: #fff4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.colors span
+{
+    position: relative;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: var(--clr);
+    margin: 10px;
+    cursor: pointer;
+}
+
+.colors span.active
+{
+    border: 2px solid #000;
+    scale: 1.5;
+}

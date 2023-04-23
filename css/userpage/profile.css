@@ -1,0 +1,221 @@
+.cover_area
+{
+    min-height: 400px;
+    width: 800px;
+    margin: auto;
+}
+
+.cover_page
+{
+    margin-top: 20px;
+    background-color: #fff;
+    text-align: center;
+    color: #405d9b;
+}
+
+.cover_page img
+{
+    width: 100%;
+}
+
+#profile_pic
+{
+    border: 2px solid #fff;
+    margin-top: -200px;
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.menu_buttons
+{
+    margin-left: 20px;
+    margin-bottom: 10px;
+    width: 100px;
+    display: inline-block;
+    background: var(--theme-color);
+    padding: 10px 8px;
+    border-radius: 8px;
+}
+
+.cover_page_info
+{
+    margin-top: 2px;
+    margin-bottom: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.cover_page_info a
+{
+    color: #fff;
+    font-size: 17px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.cover_page_info a:hover
+{
+    font-size: 18px;
+}
+
+.cover_area .cover_page span a
+{
+    transition: all 0.3s ease-in-out;
+}
+
+.cover_area .cover_page span a:hover
+{
+    color: var(--theme-color);
+}
+
+.profile_name
+{
+    color: var(--theme-color);
+    font-size: 27px;
+}
+
+.content
+{
+    display: flex;
+}
+
+/*FRIENDS EDIT*/
+.content_friends
+{
+    min-height: 400px;
+    flex: 1;
+}
+
+.content_friends .friends_bar
+{
+    border: solid 1px var(--theme-color);
+    border-radius: 4px;
+    min-height: 400px;
+    background-color: #fff;
+    margin-top: 20px;
+    color: var(--theme-color);
+    padding: 8px;
+}
+
+.content_friends .friends_bar h2
+{
+    font-size: 14px;
+}
+
+.content_friends .friends_bar .friends
+{
+    clear: both;
+}
+
+.content_friends .friends_bar .friends p
+{
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--theme-color);
+}
+
+.content_friends .friends_bar .friends .friends_img
+{
+    width: 75px;
+    float: left;
+    margin: 8px;
+    border-radius: 4px;
+}
+
+/*MESSAGES EDIT*/
+.content_messages
+{
+    padding: 20px;
+    padding-right: 0;
+    min-height: 400px;
+    flex: 2.5;
+}
+
+.content_messages .post_area
+{
+    border: solid 1px var(--theme-color);
+    border-radius: 4px;
+    height: 120px;
+    padding: 12px;
+    background-color: #fff;
+}
+
+.content_messages .post_area textarea
+{
+    outline: none;
+    max-height: 50px;
+    resize: none;
+    width: 100%;
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.content_messages .post_area .load
+{
+    margin-top: 10px;
+}
+
+.content_messages .post_area .post_button
+{
+    float: right;
+    margin-top: 10px;
+    background-color: var(--theme-color);
+    color: #fff;
+    padding: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    width: 20%;
+    height: 30px;
+    border-radius: 8px;
+    border:none;
+    transition: all 0.3s ease-in-out;
+}
+
+.content_messages .post_area .post_button:hover
+{
+    font-size: 16px;
+}
+
+.post_bar
+{
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.post_bar .post
+{
+    padding: 4px;
+    font-size: 13px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.post_bar .post .post_profile .post_profile_img
+{
+    width: 75px;
+    margin-right: 6px;
+    border-radius: 50%;
+}
+
+.post_bar .post .post_profile_post p
+{
+    font-weight: bold;
+    color: var(--theme-color);
+}
+
+.post_bar .post .post_profile_post .post_profile_post_adds
+{
+    display:inline-block;
+    justify-content: center;
+    align-items: center;
+}
+
+.post_bar .post .post_profile_post span
+{
+    color: #999;
+}

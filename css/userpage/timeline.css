@@ -1,0 +1,196 @@
+.cover_area
+{
+    min-height: 400px;
+    width: 800px;
+    margin: auto;
+}
+
+.cover_page
+{
+    margin-top: 20px;
+    background-color: #fff;
+    text-align: center;
+    color: #405d9b;
+}
+
+.cover_page img
+{
+    width: 100%;
+}
+
+#profile_pic
+{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.menu_buttons
+{
+    margin-left: 20px;
+    margin-bottom: 10px;
+    width: 100px;
+    display: inline-block;
+    background: var(--theme-color);
+    padding: 10px 8px;
+    border-radius: 8px;
+}
+
+.cover_page_info
+{
+    margin-top: 2px;
+    margin-bottom: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.cover_page_info a
+{
+    color: #fff;
+    font-size: 17px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.cover_page_info a:hover
+{
+    font-size: 18px;
+}
+
+.profile_name
+{
+    font-size: 30px;
+}
+
+.content
+{
+    display: flex;
+}
+
+/*FRIENDS EDIT*/
+.content_friends
+{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 400px;
+    flex: 1;
+}
+
+.content_friends .friends_bar
+{
+    border-radius: 4px;
+    min-height: 400px;
+    margin-top: 20px;
+    color: var(--theme-color);
+    padding: 8px;
+}
+
+
+.content_friends .friends_bar p
+{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--theme-color);
+}
+
+.content_friends .friends_bar .friends .friends_img
+{
+    width: 75px;
+    float: left;
+    margin: 8px;
+    border-radius: 4px;
+}
+
+/*MESSAGES EDIT*/
+.content_messages
+{
+    padding: 20px;
+    padding-right: 0;
+    min-height: 400px;
+    flex: 1.7;
+}
+
+.content_messages .post_area
+{
+    border: solid 1px var(--theme-color);
+    border-radius: 4px;
+    height: 120px;
+    padding: 12px;
+    background-color: #fff;
+}
+
+.content_messages .post_area textarea
+{
+    height: 60px;
+    width: 100%;
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+
+.content_messages .post_area .post_button
+{
+    float: right;
+    background-color: var(--theme-color);
+    color: #fff;
+    padding: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    width: 20%;
+    height: 30px;
+    border-radius: 8px;
+    border:none;
+    transition: all 0.3s ease-in-out;
+}
+
+.content_messages .post_area .post_button:hover
+{
+    font-size: 16px;
+}
+
+
+.post_bar
+{
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.post_bar .post
+{
+    padding: 4px;
+    font-size: 13px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.post_bar .post .post_profile .post_profile_img
+{
+    width: 75px;
+    margin-right: 6px;
+}
+
+.post_bar .post .post_profile_post p
+{
+    font-weight: bold;
+    color: var(--theme-color);
+}
+
+.post_bar .post .post_profile_post
+{
+    width: 100%;
+}
+.post_bar .post .post_profile_post .post_profile_post_adds
+{
+    display:inline-block;
+    justify-content: center;
+    align-items: center;
+}
+
+.post_bar .post .post_profile_post span
+{
+    color: #999;
+}
+

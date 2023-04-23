@@ -1,0 +1,305 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: #eaedf2;
+}
+
+section
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(./ppsds.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    clip-path: circle(0px at center);
+}
+
+.title
+{
+    position: relative;
+    color: black;
+    top: 250px;
+    z-index: 1;
+    font-size: 3em;
+    text-align: center;
+}
+
+.title2
+{
+    margin-top: 10px;
+    position: relative;
+    top: 250px;
+    z-index: 1;
+    font-size: 2em;
+    text-align: center;
+}
+
+.center
+{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.down
+{
+    position: relative;
+    width: 60px;
+    height: 90px;
+    border-radius: 25px;
+    background: transparent;
+    border: 4px solid #000;
+    overflow: hidden;
+}
+
+.down::before
+{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #000;
+    left: 50%;
+    top: 10px;
+    transform: translate(-50%, 0);
+    animation: animate 1s linear infinite;
+}
+
+.down::after
+{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 15px;
+    border-radius: 50%;
+    background: #000;
+    left: 50%;
+    top: 5px;
+    transform: translate(-50%, 0);
+    border-radius: 3px;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform: translate(-50%, 20px);
+        opacity: 0;
+    }
+    80%
+    {
+        transform: translate(-50%, 60px);
+        opacity: 1;
+    }
+    100%
+    {
+        transform: translate(-50%, 100px);
+        opacity: 0;
+    }
+}
+.container
+{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(254, 254, 237);
+    position: relative;
+    margin-top: 200vh;
+    overflow: hidden;
+}
+
+.container h2
+{
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.tabs input
+{
+    visibility: hidden;
+    display: none;
+}
+
+.buttons
+{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10000000;
+}
+
+.buttons label
+{
+    width: 20px;
+    height: 20px;
+    background: #000;
+    opacity: 0.5;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.tabs input:nth-child(1):checked ~ .buttons label:nth-child(1),
+.tabs input:nth-child(2):checked ~ .buttons label:nth-child(2),
+.tabs input:nth-child(3):checked ~ .buttons label:nth-child(3)
+{
+    opacity: 1;
+    width: 50px;
+}
+
+.content
+{
+    position: relative;
+    width: 300vw;
+    display: flex;
+    transition: 0.5s;
+}
+
+.content .box
+{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    padding: 40px;
+}
+
+.content .box:nth-child(1)
+{
+    background: url(./students-on-steps.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.content .box:nth-child(2)
+{
+    background: url(./iStock-1150384596-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.content .box:nth-child(3)
+{
+    background: url(./iStock-877985916.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.tabs input:nth-child(1):checked ~ .content
+{
+    left: 0;
+}
+
+.tabs input:nth-child(2):checked ~ .content
+{
+    left: -100vw;
+}
+
+.tabs input:nth-child(3):checked ~ .content
+{
+    left: -200vw;
+}
+
+.content .box .contentBx
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    z-index: 1;
+    gap: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.content .box .contentBx h2
+{
+    font-size: 2em;
+    color: rgb(0, 0, 0);
+    padding: 10px 12px;
+    border-radius: 40px;
+    background: white;
+}
+
+.content .box .contentBx p
+{
+    margin: 20px;
+    font-size: 1.2em;
+    color: white;
+    max-width: 700px;
+    text-align: center;
+}
+
+.content .box .contentBx button
+{
+    font-size: 1.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 35px;
+    background: white;
+    color: black;
+    letter-spacing: 0.3em;
+    margin-top: 10px;
+    font-weight: 600;
+    border: none;
+    border-radius: 40px;
+    transition: 0.5s;
+}
+
+.content .box .contentBx button:hover
+{
+    letter-spacing: 0.2em;
+}
+
+@media (max-width:800px)
+{
+    .center
+    {
+        top: 70%;
+    }
+}
+
+@media (max-width:400px)
+{
+    .center
+    {
+        top: 80%;
+    }
+}
+
+
+#preloader
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 9999;
+    display: none;
+}

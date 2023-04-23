@@ -1,0 +1,280 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo
+{
+    fill: var(--theme-color);
+    object-fit: contain;
+    width: 30px;
+    height: 30px;
+}
+
+
+
+.drop
+{
+    margin: 10px;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    text-shadow: -2px -2px 5px #fff;
+    filter: drop-shadow(4px 4px 10px #fff);
+    box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05),
+    15px 25px 10px rgba(0, 0, 0, 0),
+    15px 20px 20px rgba(0, 0, 0, 0.05),
+    inset -10px -10px 15px rgba(255, 255, 255, 0.9);
+}
+
+.drop::before
+{
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 5px;
+    background: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    filter: blur(2px);
+}
+
+.mini
+{
+    fill: var(--theme-color);
+    object-fit: contain;
+    width: 20px;
+    height: 20px;
+}
+
+.drop::after
+{
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 40px;
+    background: #fff;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    filter: blur(2px);
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+body {
+    background-color: #f1f2f6;
+    width: 100%;
+}
+
+nav {
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    box-shadow: 0px 0px 6px #ccc;
+}
+
+.nav__left {
+    display: flex;
+    align-items: center;
+}
+
+.nav__left img {
+    height: 40px;
+    object-fit: contain;
+    margin-right: 5px;
+}
+
+.nav__search {
+    display: flex;
+    align-items: center;
+    background-color: #f1f2f6;
+    padding: 15px;
+    border-radius: 50px;
+    height: 40px;
+}
+
+.nav__search input {
+    outline: none;
+    border: none;
+    background: transparent;
+    padding: 0 10px;
+}
+
+.nav__mid {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    padding: 10px 2.8vw;
+    border-radius: 5px;
+    color: #66676c;
+}
+
+.icon i {
+    font-size: 32px;
+}
+
+.icon:hover {
+    background-color: #f1f2f6;
+    transition: ease-in-out 0.1s;
+}
+
+.nav__right {
+    display: flex;
+    align-items: center;
+}
+
+
+.avatar__img:hover {
+    background: #f1f2f6;
+}
+
+.avatar__img {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 65px;
+}
+
+
+.menu
+{
+    position: absolute;
+    top: 90px;
+    right: 10px;
+    padding: 10px;
+    background: var(--theme-color);
+    width: 200px;
+    box-sizing: 0 5px 25px rgba(0, 0, 0, 0.1) ;
+    border-radius: 15px;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.menu.active
+{
+    top: 80px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu::before
+{
+    content: '';
+    position: absolute;
+    top: -7px;
+    right: 84px;
+    width: 20px;
+    height: 20px;
+    background: var(--theme-color);
+    transform: rotate(45deg);
+}
+
+.menu h4
+{
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px 0;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.2em;
+}
+
+.menu h4 span
+{
+    font-size: 14px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.menu ul li
+{
+    list-style: none;
+    padding: 10px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    direction: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu ul li a p
+{
+    color: #fff;
+    margin-left: 10px;
+}
+
+.menu ul li a
+{
+    display: flex;
+}
+
+.logo2
+{
+    fill: #fff;
+    object-fit: contain;
+    width: 20px;
+    height: 20px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
+.buttons i {
+    padding: 10px;
+    margin: 0 1px;
+    border-radius: 50%;
+    background: #f1f2f6;
+}
+
+.buttons i:hover {
+    background: #D8D9DD;
+    transition: ease-in-out 0.1s;
+}
+
+@media only screen and (max-width:720px) {
+    .nav__mid {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:938px) {
+
+    .nav__search {
+        border-radius: 50%;
+        padding: 10px;
+    }
+
+    .nav__search i {
+        border-radius: 50%;
+    }
+
+    .nav__search input {
+        display: none;
+    }
+}
+
